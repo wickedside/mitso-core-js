@@ -126,8 +126,10 @@ function angleBetweenClockHands(date) {
  *    getDay(365, false) => "December, 31"
  *    getDay(366, true) => "December, 31"
  */
-function getDay(/* day, isLeap */) {
-  throw new Error('Not implemented');
+function getDay(day, isLeap) {
+  const date = new Date(0);
+  date.setUTCFullYear(isLeap ? 2000 : 2001, 0, day);
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }).replace(' ', ', ');
 }
 
 module.exports = {
