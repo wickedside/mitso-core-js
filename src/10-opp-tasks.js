@@ -31,7 +31,8 @@ class PaginationHelper {
 
   // returns the number of items within the entire collection
   itemCount() {
-    return this.collection.length;
+    console.log(this);
+    throw new Error('Not implemented');
   }
 
   // returns the number of pages
